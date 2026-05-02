@@ -1,0 +1,14 @@
+
+{% extends 'mysite/nav.html' %}
+
+    {% block body %}
+
+<ul>
+  {% for item in item_list %}
+    <li>
+      <a href="{% url 'detail' item.id %}">{{ item.item_name }} -> {{ item.item_price }}</a>
+    </li>
+
+  {% endfor %}
+</ul>
+  {% endblock %}
